@@ -59,10 +59,11 @@ The equivalent Terminal command in **macOS** would be (it goes all on one line):
 java -cp .:./lib/ucanaccess-5.0.1.jar:./lib/commons-lang3-3.8.1.jar:./lib/commons-logging-1.2.jar:./lib/hsqldb-2.5.0.jar:./lib/jackcess-3.0.1.jar AccessEnJava
 ```
 
-Notice that period refers to the current folder and that path separator is **:** instead of **;** as in Windows. A script file with .sh extension can be generated to make more comfortable to run the program:
+Notice that period refers to the current folder and path separator is **:** instead of **;** as in Windows.\
+A script file with .sh extension can be generated to make more comfortable to run the program:
 
 ```
-#! / bin / bash
+#! /bin/bash
 java -cp.:./lib/ucanaccess-5.0.1.jar:./lib/commons-lang3-3.8.1.jar:./lib/commons-logging-1.2.jar:./lib/hsqldb-2.5 .0.jar:./lib/jackcess-3.0.1.jar AccessEnJava
 ```
 
