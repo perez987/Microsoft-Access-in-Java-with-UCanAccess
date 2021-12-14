@@ -51,3 +51,19 @@ java -cp D:/Java/JDBC;D:/Java/JDBC/lib/ucanaccess-5.0.1.jar;D:/Java/JDBC/lib/com
 REM pause
 REM exit
 ```
+REM pause line can be left like this or uncommented by removing REM, what it does is stop the flow asking to press a key to continue.
+
+The equivalent Terminal command in **macOS** would be (it goes all on one line):
+
+```
+java -cp .:./lib/ucanaccess-5.0.1.jar:./lib/commons-lang3-3.8.1.jar:./lib/commons-logging-1.2.jar:./lib/hsqldb-2.5.0.jar:./lib/jackcess-3.0.1.jar AccessEnJava
+```
+
+Notice that period refers to the current folder and that path separator is **:** instead of **;** as in Windows. A script file with .sh extension can be generated to make more comfortable to run the program:
+
+```
+#! / bin / bash
+java -cp.:./lib/ucanaccess-5.0.1.jar:./lib/commons-lang3-3.8.1.jar:./lib/commons-logging-1.2.jar:./lib/hsqldb-2.5 .0.jar:./lib/jackcess-3.0.1.jar AccessEnJava
+```
+
+In this case, instead of double-clicking, you have to run the .sh file directly in Terminal preceded by **./**.
