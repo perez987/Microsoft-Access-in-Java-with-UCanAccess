@@ -11,11 +11,11 @@ Note: Jackcess, unlike UCanAccess, is a Java code library designed to read and w
 
 ### Database
 
-MS Access database named `50empresas.accdb`, it has a single table called _Contactos_ and this table has 3 fields: _Id_ (auto-numeric) / _Nombre_ (text) / _Telefono_ (text).
+MS Access database named 50empresas.accdb, it has a single table called _Contactos_ and this table has 3 fields: _Id_ (auto-numeric) / _Nombre_ (text) / _Telefono_ (text).
 
 ### Dependencies
 
-You need `ucanaccess.jdbc.UcanaccessDriver` (driver that allows connect with MS Access from Java) and the appropriate connection string in addition to 5 JAR files that are required as dependencies. They can be downloaded from the Maven repository but they are also included into the distribution package. When you unzip UCanAccess you will see something like this:
+You need ucanaccess.jdbc.UcanaccessDriver (driver that allows connect with MS Access from Java) and the appropriate connection string in addition to 5 JAR files that are required as dependencies. They can be downloaded from the Maven repository but they are also included into the distribution package. When you unzip UCanAccess you will see something like this:
 
 ```
 ucanaccess-5.0.1-package
@@ -31,9 +31,9 @@ These files must be called when running the program from the command line.
 
 ### Running the code with its dependencies
 
-`AccessEnJava.java` source file is in the `D:\Java\JDBC` folder. The 5 JAR files plus `50empresas.accdb` database are in the `D:\Java\JDBC\lib` folder. To run the program from console, you have to include the main class, as is usually done, and also the dependencies, JAR files in this case.
+AccessEnJava.java source file is in the D:\Java\JDBC folder. The 5 JAR files plus 50empresas.accdb database are in the D:\Java\JDBC\lib folder. To run the program from console, you have to include the main class, as is usually done, and also the dependencies, JAR files in this case.
 
-To call the dependencies, use the java executable with -cp modifier followed by the path to the current folder (D:\Java\JDBC in this example) + path to each of the required JAR files + main class.
+To call the dependencies, use the java executable with -cp modifier followed by the path to the current folder (D:\Java\JDBC in this example) + path to each of the required JAR files + main class.\
 `java -cp working-dir-path jar-files-path main-class`
 
 The required command is different depending on the operating system. In **Windows** you have to use (everything goes on a single line):
