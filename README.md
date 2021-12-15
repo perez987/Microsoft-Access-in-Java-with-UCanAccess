@@ -159,7 +159,30 @@ while(resultado.next()) {
 System.out.println(resultado.getInt(1) + "\t" + resultado.getString(3) + "\t" + resultado.getString(2));
 }
 ```
+This is the output:
 
+```
+Conexión abierta.
+Se van a mostrar los 50 registros de la tabla.
+SELECT Id, Nombre, Telefono FROM Contactos
+Pulsa una tecla para continuar...
+ 
+Id      Teléfono        Nombre
+==      ========        ======
+1       966521455       AEK Goup Inc.
+2       944444102       ACE Hardware CO.
+3       963325874       ADI Systems Inc.
+4       986523365       Administaff Inc.
+5       923656987       ADVO Inc.
+6       956231487       Aeroquip - Vickers Inc.
+7       933659214       LST IND. CO
+8       956231487       Agway Inc.
+9       912548758       Air Products and Chemicals Inc.
+10      965235898       Airborne Freight Corp.
+...
+```
+
+The exercise continues with new SQL statements and the presentation of the results. SELECT statements are tested with BETWEEN (_executeQuery_ command), INSERT and UPDATE statements (_executeUpdate_ commands) and so on. At the end, resources used are flushed and connection is closed.
 
 ### Java code
 
@@ -372,5 +395,3 @@ public class AccessEnJava {
     }
 }
 ```
-
-(Work in progress...)
