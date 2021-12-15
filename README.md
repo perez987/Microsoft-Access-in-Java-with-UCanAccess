@@ -2,12 +2,12 @@
 
 <table>
   <tr><td align=center><img src=jdbc.png></td></tr>
-  <tr><td>Java code for console: How to connect to a Microsoft Access database using UCanAccess JDBC driver, sending SQL statements to the database and showing results, running the program from command line including dependencies</td></tr>
+  <tr><td>Java code for console: How to connect to a Microsoft Access database using UCanAccess JDBC driver, sending SQL statements and showing results, running the program from command line including dependencies</td></tr>
 </table><br>
 
 Since Java 8, JDBC-ODBC bridge is no longer included. There are some proprietary JDBC drivers to connect to MS Access but UCanAccess project is currently active, open source, easy to use and provides a JDBC driver built on top of Jackcess code.
 
-Note: Jackcess, unlike UCanAccess, is a Java code library designed to read and write MS Access databases that is not a JDBC driver but a direct implementation of the available features to interact with MS Access databases. Its license is of Apache License type.
+Note: Jackcess, unlike UCanAccess, is a Java code library designed to read and write MS Access databases that is not a JDBC driver but a direct implementation of the available features to interact with MS Access databases. It has Apache License.
 
 ### Database
 
@@ -15,7 +15,7 @@ MS Access database named 50empresas.accdb, it has a single table called _Contact
 
 ### Dependencies
 
-You need ucanaccess.jdbc.UcanaccessDriver (driver that allows connect with MS Access from Java) and the connection string in addition to 5 JAR files that are required as dependencies. They can be downloaded from the Maven repository but they are also included into the distribution package. When you unzip UCanAccess you will see something like this:
+You need ucanaccess.jdbc.UcanaccessDriver (driver that allows connect with MS Access from Java) and the connection string in addition to 5 JAR files that are required as dependencies. They can be downloaded from the Maven repository but they are also included within the distribution package. When you unzip UCanAccess you will see something like this:
 
 ```
 ucanaccess-5.0.1-package
