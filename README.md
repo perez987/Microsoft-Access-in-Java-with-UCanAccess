@@ -85,7 +85,7 @@ import java.io.*;
 import java.util.Scanner;
 ```
 
-3 variables are used: connection, SQL statement and result obtained with returned rows.
+We need 3 variables: connection, SQL statement and result obtained with returned rows.
 
 ```java
 Connection conectar = null;
@@ -94,4 +94,30 @@ ResultSet resultado = null;
 // variable to detect keystrokes, used to stop
 // the flow of the program until the user presses a key
 Scanner s = new Scanner(System.in);
+```
+
+### Database connection
+
+First you need to register the UCanAccess driver.
+
+```java
+Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
+```
+
+Connection string is built with `jdbc:ucanaccess://` followed by the path to the database. In order not to leave the path configured as a constant, `getAbsolutePath` method is used, it returns the path to the working folder.
+
+```java
+// get the absolute path to the project's working folder
+// trick: create a new file and get its path
+String ruta = new File(".").getAbsolutePath();
+// getAbsolutePath returns the path to the folder but adds a period at the end
+// we remove that last character with substring and length
+ruta = ruta.substring(0, ruta.length()-1);
+// MS Access DB name is added
+// File.separatorChar is used, it places \ or / depending on the operating system
+ruta = ruta + "lib" + File.separatorChar + "50empresas.accdb";
+// Message
+System.out.println ("Path to database: " + ruta + " \nPress a key to continue...");
+// String ruta = "D:/JDBC/50empresas.accdb";
+String dbURL = "jdbc:ucanaccess://" + ruta;
 ```
