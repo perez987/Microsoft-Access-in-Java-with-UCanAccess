@@ -31,7 +31,7 @@ These files must be called when running the program from the command line.
 
 ### Running the code with its dependencies
 
-AccessEnJava.java source file is in the D:\Java\JDBC folder. The 5 JAR files plus 50empresas.accdb database are in the D:\Java\JDBC\lib folder. To run the program from console, you have to include the main class, as is usually done, and also the dependencies, JAR files in this case.
+AccessEnJava.java source file is in the D:\Java\JDBC folder. The 5 JAR files plus 50empresas.accdb database are in the D:\Java\JDBC\lib folder. To run the program from console, you have to include the main class, as is usually done, and also the dependencies.
 
 To call the dependencies, use the java executable with -cp modifier followed by the path to the current folder (D:\Java\JDBC in this example) + path to each of the required JAR files + main class.\
 `java -cp working-dir-path jar-files-path main-class`
