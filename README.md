@@ -68,3 +68,30 @@ java -cp.:./lib/ucanaccess-5.0.1.jar:./lib/commons-lang3-3.8.1.jar:./lib/commons
 ```
 
 In this case, instead of double-clicking, you have to run the .sh file directly in Terminal preceded by **./**.
+
+### Required packages
+
+It is necessary to import packages for the connection with MS Access in addition to the Scanner class that allows receiving from the keyboard (to stop the flow of the program until the user presses a key).
+
+```java
+// packages for the connection with MS Access and SQL commands
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.io.*;
+// package to use the Scanner class that allows receiving from keyboard
+import java.util.Scanner;
+```
+
+3 variables are used: connection, SQL statement and result obtained with returned rows.
+
+```java
+Connection conectar = null;
+Statement sentencia = null;
+ResultSet resultado = null;
+// variable to detect keystrokes, used to stop
+// the flow of the program until the user presses a key
+Scanner s = new Scanner(System.in);
+```
