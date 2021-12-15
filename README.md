@@ -15,7 +15,7 @@ MS Access database named 50empresas.accdb, it has a single table called _Contact
 
 ### Dependencies
 
-You need ucanaccess.jdbc.UcanaccessDriver (driver that allows connect with MS Access from Java) and the appropriate connection string in addition to 5 JAR files that are required as dependencies. They can be downloaded from the Maven repository but they are also included into the distribution package. When you unzip UCanAccess you will see something like this:
+You need ucanaccess.jdbc.UcanaccessDriver (driver that allows connect with MS Access from Java) and the connection string in addition to 5 JAR files that are required as dependencies. They can be downloaded from the Maven repository but they are also included into the distribution package. When you unzip UCanAccess you will see something like this:
 
 ```
 ucanaccess-5.0.1-package
