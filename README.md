@@ -142,7 +142,7 @@ String dos = s.nextLine();
 
 ### SQL command objects
 
-SQL command objects (statement) have different execution methods:
+SQL command objects (_statement_) have different execution methods:
 
 - ResultSet `executeQuery()` executes a SQL query and returns a ResultSet (table with returned rows), it is used to read the contents of the table and display the records (SELECT statements)
 - int `executeUpdate()` executes a SQL query that must be INSERT, UPDATE or DELETE, it is used to modify the content of the table and returns the number of rows affected
