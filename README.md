@@ -186,6 +186,8 @@ The exercise continues with new SQL statements and the presentation of the resul
 
 ### Java code
 
+This is the code of the main class.
+
 ```java
 // paquetes para la conexion con MS Access y comandos SQL
 import java.sql.Connection;
