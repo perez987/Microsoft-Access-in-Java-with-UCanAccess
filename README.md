@@ -122,6 +122,45 @@ System.out.println ("Path to database: " + ruta + " \nPress a key to continue...
 String dbURL = "jdbc:ucanaccess://" + ruta;
 ```
 
+Connection is created with DriverManager class, path to the data source is passed as parameter.
+
+```java
+conectar = DriverManager.getConnection(dbURL);
+```
+
+### Press a key to continue ...
+
+Scanner class is declared as **s** and used instantiating a new string to get the variable **s** (the keystroke).
+
+```java
+Scanner s = new Scanner(System.in);
+// ...
+String una = s.nextLine();
+// ...
+String dos = s.nextLine();
+```
+
+### SQL command objects
+
+SQL command objects (statement) have different execution methods:
+
+- ResultSet `executeQuery()` executes a SQL query and returns a ResultSet (table with returned rows), it is used to read the contents of the table and display the records (SELECT statements)
+- int `executeUpdate()` executes a SQL query that must be INSERT, UPDATE or DELETE, it is used to modify the content of the table and returns the number of rows affected
+- boolean `execute()` executes a SQL query, true if the statement returns a set of rows and false if it returns a count of updates or there is no result.
+
+Here the statement is created with the connection's `createStatement` method and it returns a ResultSet, the query is of the SELECT type so the command is of the `executeQuery` type. Records are displayed by looping through the ResultSet with its `getInt()` method to which the index of each column in the table is passed and returns the value of that cell.
+
+```java
+sentencia = conectar.createStatement();
+resultado = sentencia.executeQuery("SELECT Id, Nombre, Telefono FROM Contactos");
+System.out.println("Id\tTel\u00e9fono\tNombre");
+System.out.println("==\t========\t======");
+while(resultado.next()) {
+System.out.println(resultado.getInt(1) + "\t" + resultado.getString(3) + "\t" + resultado.getString(2));
+}
+```
+
+
 ### Java code
 
 ```java
