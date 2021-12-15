@@ -2,12 +2,12 @@
 
 <table>
   <tr><td align=center><img src=jdbc.png></td></tr>
-  <tr><td>Java code for console: How to connect to a Microsoft Access database using UCanAccess JDBC driver, sending SQL statements and showing results, running the program from command line including dependencies</td></tr>
+  <tr><td>Java exercise for console: How to connect to a Microsoft Access database using the JDBC UCanAccess driver, issue SQL statements to the database and display the results, run the program from the command line along with dependencies</td></tr>
 </table><br>
 
-Since Java 8, JDBC-ODBC bridge is no longer included. There are some proprietary JDBC drivers to connect to MS Access but UCanAccess project is currently active, open source, easy to use and provides a JDBC driver built on top of Jackcess code.
+Since Java 8, JDBC-ODBC bridge is no longer included. There are some proprietary JDBC drivers to connect to MS Access but the UCanAccess project is active, is open source, works well, is simple to use and provides a JDBC driver generated over Jackcess code.
 
-Note: Jackcess, unlike UCanAccess, is a Java code library designed to read and write MS Access databases that is not a JDBC driver but a direct implementation of the available features to interact with MS Access databases. It has Apache License.
+Note: Jackcess, unlike UCanAccess, is a Java code library designed to read and write MS Access databases that is not a JDBC driver but a direct implementation of the features available to interact with MS Access databases. Its license is of the Apache License type.
 
 ### Database
 
@@ -15,7 +15,7 @@ MS Access database named 50empresas.accdb, it has a single table called _Contact
 
 ### Dependencies
 
-You need ucanaccess.jdbc.UcanaccessDriver (driver that allows connect with MS Access from Java) and the connection string in addition to 5 JAR files that are required as dependencies. They can be downloaded from the Maven repository but they are also included within the distribution package. When you unzip UCanAccess you will see something like this:
+You need ucanaccess.jdbc.UcanaccessDriver (driver that allows connect with MS Access from Java) and the connection string in addition to 5 JAR files that are needed as dependencies. They can be downloaded from the Maven repository but they are also included in UCanAccess. When you unzip the distribution package you get something like this:
 
 ```
 ucanaccess-5.0.1-package
@@ -29,20 +29,20 @@ ucanaccess-5.0.1-package
 
 These files must be called when running the program from the command line.
 
-### Running the code with its dependencies
+### Run the program with dependencies
 
-AccessEnJava.java source file is in the D:\Java\JDBC folder. The 5 JAR files plus 50empresas.accdb database are in the D:\Java\JDBC\lib folder. To run the program from console, you have to include the main class, as is usually done, and also the dependencies.
+In this exercise the AccessEnJava source code is in the disk folder D:\Java\JDBC; the 5 JAR files and the 50empresas.accdb database are in the folder D:\Java\JDBC\lib. To run the program from console, you have to include the main class, as usual, and also the dependencies.
 
-To call the dependencies, use the java executable with -cp modifier followed by the path to the current folder (D:\Java\JDBC in this example) + path to each of the required JAR files + main class.\
+To call dependencies use the java executable with -cp modifier followed by the path to the current folder (D:\Java\JDBC) + path to each of the required JAR files + main class.\
 `java -cp working-dir-path jar-files-path main-class`
 
-The required command is different depending on the operating system. In **Windows** you have to use (everything goes on a single line):
+ The command is different depending on the operating system. In **Windows** you have to use (everything goes on a single line):
 
 ```
 java -cp D:/Java/JDBC;D:/Java/JDBC/lib/ucanaccess-5.0.1.jar;D:/Java/JDBC/lib/commons-lang3-3.8.1.jar;D:/Java/JDBC/lib/commons-logging-1.2.jar;D:/Java/JDBC/lib/hsqldb-2.5.0.jar;D:/Java/JDBC/lib/jackcess-3.0.1.jar AccessEnJava
 ```
 
-Notice that paths are separated by **;** and there are no spaces between them but there are spaces between paths and the name of the class at the end. As it is cumbersome to write the whole text each time, you can create a script file with **.bat** extension from which to run it comfortably with double click. In this case the text of the text file must be:
+Notice that paths are separated by **;** and there are no spaces between them but between paths and the name of the class at the end. As it is cumbersome to write the whole text each time, you can create a script file with extension **.bat** from which to run it comfortably with double click. The text of the bat file must be:
 
 ```
 @echo off
@@ -51,15 +51,15 @@ java -cp D:/Java/JDBC;D:/Java/JDBC/lib/ucanaccess-5.0.1.jar;D:/Java/JDBC/lib/com
 REM pause
 REM exit
 ```
-REM pause line can be left like this or uncommented by removing REM, what it does is stop the flow asking to press a key to continue.
+REM pause line can be left like this or uncommented by removing REM, what it does is stop the flow by asking to press a key to continue.
 
-The equivalent Terminal command in **macOS** would be (it goes all on one line):
+The equivalent Terminal command in **macOS** would be (goes all on one line):
 
 ```
 java -cp .:./lib/ucanaccess-5.0.1.jar:./lib/commons-lang3-3.8.1.jar:./lib/commons-logging-1.2.jar:./lib/hsqldb-2.5.0.jar:./lib/jackcess-3.0.1.jar AccessEnJava
 ```
 
-Notice that period refers to the current folder and path separator is **:** instead of **;** as in Windows.\
+Notice that the dot refers to the current folder and path separator is **:** instead of **;** as in Windows.\
 A script file with .sh extension can be generated to make more comfortable to run the program:
 
 ```
@@ -67,11 +67,11 @@ A script file with .sh extension can be generated to make more comfortable to ru
 java -cp.:./lib/ucanaccess-5.0.1.jar:./lib/commons-lang3-3.8.1.jar:./lib/commons-logging-1.2.jar:./lib/hsqldb-2.5 .0.jar:./lib/jackcess-3.0.1.jar AccessEnJava
 ```
 
-In this case, instead of double-clicking, you have to run the .sh file directly in Terminal preceded by **./**.
+Instead of double-clicking, you have to run the .sh file directly in Terminal preceded by **./**.
 
 ### Required packages
 
-It is necessary to import packages for the connection with MS Access in addition to the Scanner class that allows receiving from the keyboard (to stop the flow of the program until the user presses a key).
+It is necessary to import packages for the connection with MS Access in addition to the Scanner class that allows receiving from keyboard (to stop the flow of the program until the user presses a key).
 
 ```java
 // packages for the connection with MS Access and SQL commands
@@ -98,13 +98,13 @@ Scanner s = new Scanner(System.in);
 
 ### Database connection
 
-First you need to register the UCanAccess driver.
+First you have to register the UCanAccess driver.
 
 ```java
 Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
 ```
 
-Connection string is built with `jdbc:ucanaccess://` followed by the path to the database. In order not to leave the path configured as a constant, `getAbsolutePath` method is used, it returns the path to the working folder.
+Connection string is built with `jdbc:ucanaccess://` followed by the path to the database. To avoid leaving the path set as a constant, use the `getAbsolutePath` method that returns the path to the working folder.
 
 ```java
 // get the absolute path to the project's working folder
@@ -122,7 +122,7 @@ System.out.println ("Path to database: " + ruta + " \nPress a key to continue...
 String dbURL = "jdbc:ucanaccess://" + ruta;
 ```
 
-Connection is created with DriverManager class, path to the data source is passed as parameter.
+Connection is created with DriverManager class, path to the data source is passed as a parameter.
 
 ```java
 conectar = DriverManager.getConnection(dbURL);
@@ -130,7 +130,7 @@ conectar = DriverManager.getConnection(dbURL);
 
 ### Press a key to continue ...
 
-Scanner class is declared as **s** and used instantiating a new string to get the variable **s** (the keystroke).
+Scanner class is declared as **s** and used instantiating a new string to collect the variable **s** (the keystroke).
 
 ```java
 Scanner s = new Scanner(System.in);
@@ -145,10 +145,10 @@ String dos = s.nextLine();
 SQL command objects (_statement_) have different execution methods:
 
 - ResultSet `executeQuery()` executes a SQL query and returns a ResultSet (table with returned rows), it is used to read the contents of the table and display the records (SELECT statements)
-- int `executeUpdate()` executes a SQL query that must be INSERT, UPDATE or DELETE, it is used to modify the content of the table and returns the number of rows affected
-- boolean `execute()` executes a SQL query, true if the statement returns a set of rows and false if it returns a count of updates or there is no result.
+- int `executeUpdate()` executes a SQL query that must be INSERT, UPDATE or DELETE, it is used to modify the content of the table and returns the number of  affected rows
+- boolean `execute()` executes a SQL query, true if the statement returns a set of rows and false if it returns an updates count or there is no result.
 
-Here the statement is created with the connection's `createStatement` method and it returns a ResultSet, the query is of the SELECT type so the command is of the `executeQuery` type. Records are displayed by looping through the ResultSet with its `getInt()` method to which the index of each column in the table is passed and returns the value of that cell.
+Here the statement is created with the connection's `createStatement` method and returns a ResultSet, the query is of the SELECT type so the command is of the `executeQuery` type. Records are displayed by looping through the ResultSet with its `getInt()` method into which the index of each column in the table is passed and returns the value of that cell.
 
 ```java
 sentencia = conectar.createStatement();
@@ -182,7 +182,7 @@ Id      Teléfono        Nombre
 ...
 ```
 
-The exercise continues with new SQL statements and the presentation of the results. SELECT statements are tested with BETWEEN (_executeQuery_ command), INSERT and UPDATE statements (_executeUpdate_ commands) and so on. At the end, resources used are flushed and connection is closed.
+The exercise continues with new SQL statements and the presentation of the results on screen. SELECT statements are tested with BETWEEN (_executeQuery_ command), INSERT and UPDATE statements (_executeUpdate_ commands), etc. At the end, resources used are emptied and connection is closed.
 
 ### Java code
 
