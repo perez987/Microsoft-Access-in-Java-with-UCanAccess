@@ -33,7 +33,8 @@ These files must be called when running the program from the command line.
 
 In this exercise the AccessEnJava source code is in the disk folder D:\Java\JDBC; the 5 JAR files and the 50empresas.accdb database are in the folder D:\Java\JDBC\lib. To run the program from console, you have to include the main class, as usual, and also the dependencies.
 
-To call dependencies use the java executable with -cp modifier followed by the path to the current folder (D:\Java\JDBC) + path to each of the required JAR files + main class.\
+To call dependencies use the java executable with -cp modifier followed by the path to the current folder (D:\Java\JDBC) + path to each of the required JAR files + main class.
+
 `java -cp working-dir-path jar-files-path main-class`
 
  The command is different depending on the operating system. In **Windows** you have to use (everything goes on a single line):
