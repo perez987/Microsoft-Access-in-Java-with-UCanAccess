@@ -37,8 +37,14 @@ To call dependencies use the java executable with -cp modifier followed by the p
 
 `java -cp working-dir-path jar-files-path main-class`
 
- The command is different depending on the operating system. In **Windows** you have to use (everything goes on a single line):
+Command is different depending on the operating system.
+ 
+<table>
+	<tr><td>Windows</td></tr>
+</table>
 
+Command line in Windows is (goes all on one line):
+ 
 ```
 java -cp D:/Java/JDBC;D:/Java/JDBC/lib/ucanaccess-5.0.1.jar;D:/Java/JDBC/lib/commons-lang3-3.8.1.jar;D:/Java/JDBC/lib/commons-logging-1.2.jar;D:/Java/JDBC/lib/hsqldb-2.5.0.jar;D:/Java/JDBC/lib/jackcess-3.0.1.jar AccessEnJava
 ```
@@ -54,7 +60,11 @@ REM exit
 ```
 REM pause line can be left like this or uncommented by removing REM, what it does is stop the flow by asking to press a key to continue.
 
-The equivalent Terminal command in **macOS** would be (goes all on one line):
+<table>
+	<tr><td>macOS</td></tr>
+</table
+	
+Terminal command in macOS is (goes all on one line):
 
 ```
 java -cp .:./lib/ucanaccess-5.0.1.jar:./lib/commons-lang3-3.8.1.jar:./lib/commons-logging-1.2.jar:./lib/hsqldb-2.5.0.jar:./lib/jackcess-3.0.1.jar AccessEnJava
