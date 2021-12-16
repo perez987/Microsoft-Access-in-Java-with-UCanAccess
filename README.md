@@ -163,10 +163,10 @@ System.out.println(resultado.getInt(1) + "\t" + resultado.getString(3) + "\t" + 
 This is the output:
 
 ```
-Conexión abierta.
-Se van a mostrar los 50 registros de la tabla.
+Conection open.
+The 50 records of the table will be displayed.
 SELECT Id, Nombre, Telefono FROM Contactos
-Pulsa una tecla para continuar...
+Press a key to continue...
  
 Id      Teléfono        Nombre
 ==      ========        ======
