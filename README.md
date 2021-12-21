@@ -2,7 +2,7 @@
 
 <table>
   <tr><td align=center><img src=jdbc.png></td></tr>
-  <tr><td>Java exercise for console: How to connect to a Microsoft Access database using the JDBC UCanAccess driver, issue SQL statements to the database and display the results, run the program from the command line along with dependencies</td></tr>
+  <tr><td><b>Java exercise for console: How to connect to a Microsoft Access database using the JDBC UCanAccess driver, issue SQL statements to the database and display the results, run the program from the command line along with dependencies</b></td></tr>
 </table><br>
 
 Since Java 8, JDBC-ODBC bridge is no longer included. There are some proprietary JDBC drivers to connect to MS Access but the UCanAccess project is active, is open source, works well, is simple to use and provides a JDBC driver generated over Jackcess code.
