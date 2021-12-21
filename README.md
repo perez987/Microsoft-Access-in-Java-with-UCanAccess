@@ -96,14 +96,15 @@ import java.io.*;
 import java.util.Scanner;
 ```
 
+### Declared variables
+
 We need 3 variables: connection, SQL statement and result obtained with returned rows.
 
 ```java
 Connection conectar = null;
 Statement sentencia = null;
 ResultSet resultado = null;
-// variable to detect keystrokes, used to stop
-// the flow of the program until the user presses a key
+// variable to detect keystrokes, used to stop the flow of the program until the user presses a key
 Scanner s = new Scanner(System.in);
 ```
 
