@@ -1,7 +1,7 @@
 # Microsoft Access in Java with 64 bits UCanAccess driver
 
 <table>
-  <tr><td align=center><img src=jdbc.png></td></tr>
+  <tr><td align=center><img src=img/jdbc.png></td></tr>
   <tr><td><b>Java exercise for console: How to connect to a Microsoft Access database using the JDBC UCanAccess driver, issue SQL statements to the database and display the results, run the program from the command line along with dependencies</b></td></tr>
 </table><br>
 
