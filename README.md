@@ -29,6 +29,10 @@ ucanaccess-5.0.1-package
 
 These files must be called when running the program from the command line.
 
+### Compile the code
+
+This is done in the usual way, with the command `javac AccessEnJava.java` in the folder where the code file is.
+
 ### Run the program with dependencies
 
 In this exercise the AccessEnJava source code is in the disk folder D:\Java\JDBC; the 5 JAR files and the 50empresas.accdb database are in the folder D:\Java\JDBC\lib. To run the program from console, you have to include the main class, as usual, and also the dependencies.
