@@ -66,7 +66,7 @@ REM pause line can be left like this or uncommented by removing REM, what it doe
 
 <table>
 	<tr><td>macOS</td></tr>
-</table
+</table>
 	
 Terminal command in macOS is (goes all on one line):
 
