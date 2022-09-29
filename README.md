@@ -41,7 +41,7 @@ To call dependencies use the java executable with -cp modifier followed by the p
 
 `java -cp working-dir-path jar-files-path main-class`
 
-Command is different depending on the operating system.
+Command line is different depending on the operating system.
  
 <table>
 	<tr><td>Windows</td></tr>
